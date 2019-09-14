@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+</head>
+<body>
+    <form action="formulario-guardar.html" method="POST" autocomplete="off">
+        <label for="nombre">Nombres</label>
+        <!-- maximo de 15 caracteres -->
+        <input type="text" id="nombre" pattern="[A-Za-z\s]{1,15}" title="Solo letras y maximo 15 caracteres" required>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
