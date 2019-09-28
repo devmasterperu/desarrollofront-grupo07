@@ -55,6 +55,46 @@
         .selector5 p:nth-last-of-type(3) {
             color: green;
         }
+
+        .selector6 div:first-of-type {
+            background-color: yellow;
+        }
+
+        .selector6 p:first-of-type {
+            background-color: coral; /* El primero de su tipo */
+        }
+
+        .selector6 p:last-of-type {
+            background-color: lawngreen; /* El ultimo de su tipo */
+        }
+
+        .selector6 p:nth-of-type(3) {
+            color: red;
+        }
+
+        .selector7 span:only-of-type {
+            color: green; /* unico elemento span dentro de esa seccion */
+        }
+
+        .selector8 li:empty {
+            display: none; /* ocultar elemento */
+        }
+
+        .selector8 li:not(:first-child) {
+            background-color: lawngreen;
+        }
+
+        .selector8 li:not(:nth-child(2)) {
+           color: red;
+        }
+
+        .selector9 p:first-child:first-line {
+            color: green;
+        }
+
+        .selector9 p:first-child:first-letter {
+            font-size: 50px;
+        }
     </style>
 </head>
 
@@ -145,7 +185,7 @@
     </section>
 
     <nav>
-        <ul class="selector08">
+        <ul class="selector8">
             <li>Lorem ipsum</li>
             <li>Lorem ipsum</li>
             <li>Lorem ipsum</li>
