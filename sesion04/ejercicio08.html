@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <style>
+        /* circunflejo ^ */
+        /* contenga */
+        [class*="titulo"] {
+            color:skyblue;
+        }
+        [class*="btn"] {
+            color: purple;
+        }
+        /* comiencen */
+        [href^="https"]{
+            color: green;
+        }
+        /* termina */
+        [href$="gmail.com"]{
+            color: red;
+        }
+        [href$=".pdf"] {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1><a class="titulo" href="">Devmaster</a></h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem eligendi itaque nostrum illum mollitia nesciunt facere, officiis accusantium voluptatum fugit, pariatur necessitatibus nemo consequuntur alias ea unde ab iste? Provident.</p>
+    <a class="btn" href="">Ver enlace</a>
+    <a href="https://facebook.com">Faceebok</a>
+    <a href="http://gmail.com">Gmail</a>
+    <a href="info.pdf">Info PDF</a>
+    <a href="terminos.pdf">Terminos PDF</a>
+</body>

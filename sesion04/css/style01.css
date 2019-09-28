@@ -1,0 +1,13 @@
+/* selector universal */
+/* * {
+    color: red; 
+} */
+
+/* selector de etiqueta */
+h1 {
+    text-transform: uppercase;
+}
+
+h3 {
+    color: blue;
+}
