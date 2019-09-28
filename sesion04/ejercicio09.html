@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <style>
+        /* Pseudo clases */
+        .selector1 :nth-child(1) { /* primer hijo */
+            color: tomato;
+        }
+
+        .selector1 :nth-child(3) {
+            color: green;
+        }
+
+        .selector1 :nth-child(4) { /* ultimo hijo */
+            color: red;
+        }
+
+        /* 
+            selección del primer y ultimo hijo 
+        */
+        .selector2 :first-child {
+            color: violet;
+        }
+
+        .selector2 :last-child {
+            color: yellow;
+        }
+
+        /*
+            selección de elementos pares e impares
+        */
+        .selector3 :nth-child(odd){
+            background-color: green;
+        }
+
+        .selector3 :nth-child(even){
+            background-color: red;
+        }
+
+        .selector4 :nth-last-child(3) {
+            text-transform: uppercase;
+        }
+
+        .selector5 h3:nth-last-of-type(1) {
+            color: #FF2B45;
+        }
+
+        .selector5 p:nth-last-of-type(4) {
+            color: #0467DF;
+        }
+
+        .selector5 p:nth-last-of-type(3) {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- section.selector1 -->
+    <section class="selector1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iste libero, temporibus, tempore non beatae.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iste libero, temporibus, tempore non beatae.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iste libero, temporibus, tempore non beatae.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iste libero, temporibus, tempore non beatae.
+        </p>
+    </section>
+    <br><br>
+    <section class="selector2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iste libero, temporibus, tempore non beatae
+            rem dolore atque quas excepturi, iusto cupiditate aut expedita explicabo quos laudantium ex esse soluta.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iste libero, temporibus, tempore non beatae
+            rem dolore atque quas excepturi, iusto cupiditate aut expedita explicabo quos laudantium ex esse soluta.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iste libero, temporibus, tempore non beatae
+            rem dolore atque quas excepturi, iusto cupiditate aut expedita explicabo quos laudantium ex esse soluta.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iste libero, temporibus, tempore non beatae
+            rem dolore atque quas excepturi, iusto cupiditate aut expedita explicabo quos laudantium ex esse soluta.</p>
+    </section>
+    <br><br>
+    <nav>
+        <ul class="selector3">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+    </nav>
+    <br><br>
+    <nav>
+        <ol class="selector4">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ol>
+    </nav>
+    <br><br>
+    <section class="selector5">
+        <h3>Sub titulo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <h3>Sub titulo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+    </section>
+    <br><br>
+    <section class="selector6">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+    </section>
+    <br><br>
+    <section class="selector7">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+        <span>texto prueba only-of-type</span>
+    </section>
+
+    <nav>
+        <ul class="selector08">
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+            <li></li> <!-- sin contenido -->
+        </ul>
+    </nav>
+    <br><br>
+    <section class="selector9">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga recusandae optio asperiores. Repellendus
+            explicabo, quas quis ea asperiores dignissimos provident recusandae odio distinctio beatae quo fugit.
+            Inventore mollitia magnam nisi!Voluptate eius sequi numquam nihil cum. Molestias aut, aspernatur labore,
+            iste nemo aperiam provident quod tempore iure perferendis culpa nostrum magnam quisquam ex cupiditate
+            pariatur distinctio doloremque, laboriosam rem tenetur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati facere, soluta quo quam molestiae
+            quas velit ducimus.</p>
+    </section>
+</body>
