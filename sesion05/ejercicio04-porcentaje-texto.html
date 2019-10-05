@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <style>
+        html {
+            font-size: 18px;
+        }
+        section {
+            font-size: 100%; /* 18px */
+        }
+        span {
+           font-size: 200%; /* 36px */
+        }
+        
+        /* Flexbox (Neesita elemento padre e hijos)*/
+        .articulos {
+           display: flex; 
+        }
+        article {
+            width: 50%;
+            height: 300px;
+            background-color: deeppink;
+        }
+
+        footer {
+            background-color: springgreen;
+        }
+        
+        .main-container {
+            max-width: 900px; /* ancho maximo */
+            width: 100%;
+            
+            /* centrado elemento en bloque */
+            /* margin-left: auto;
+            margin-right: auto; */
+            margin: 0 auto; /* centrado en una linea */
+
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <!-- Unidad de Medida = % para texto -->
+    <section>
+        Centro de entrenamiento <span>Devmaster</span>
+    </section>
+
+    <!-- Unidad de Medida = % para elemento -->
+    <section class="articulos">
+        <article>Articulo 1</article>
+        <article>Articulo 2</article>
+    </section>
+
+    <footer>
+        <div class="main-container">
+            <p> Devmaster 2019 | Todos los derechos reservados © </p>
+        </div>
+    </footer>
+</body>
