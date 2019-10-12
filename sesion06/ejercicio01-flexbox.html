@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <style>
+        article {
+            width: 100px; /* 250px */
+            height: 100px;
+
+            background-color: deeppink;
+            color: #FFF;
+        }
+
+        section {
+            width: 800px;
+            height: 800px;
+
+            background-color: springgreen;
+
+            display: flex;
+            /* flex-direction: row; */ /* row 👶🏼 | row-reverse* | colomn | column-reverse */
+            justify-content: normal; /* normal 👶🏼 | center | space-between | space-around | flex-start | flex-end*/
+            /* flex-wrap: wrap-reverse;*/ /* no-wrap 👶🏼 | wrap | wrap-reverse */
+
+            flex-flow: row no-wrap; /* flex-direction flex-wrap */
+
+            align-items: baseline ; /* normal 👶🏼 | center | flex-start  | flex-end | strech | baseline */
+        }
+
+        section :nth-child(2) {
+            order: -1; /* acepta valor negativo */
+            font-size: 48px;
+        }
+
+        section :nth-child(1) {
+            order: 1; 
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Padre -->
+    <section>
+        <!-- Hijos -->
+        <article>1</article>
+        <article>2</article>
+        <article>3</article>
+        <article>4</article>
+
+        
+    </section>
+</body>
