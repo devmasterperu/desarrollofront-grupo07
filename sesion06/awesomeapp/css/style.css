@@ -1,0 +1,306 @@
+/*
+*   Awesome App
++   Author: Devmaster
+*   Description: Description Proyect
+*   Version: 1.0
+*
+*/
+
+/****************
+Font
+****************/
+/* barlow-regular - latin */
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/barlow/barlow-v4-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('../font/barlow/barlow-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../font/barlow/barlow-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../font/barlow/barlow-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../font/barlow/barlow-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../font/barlow/barlow-v4-latin-regular.svg#Barlow') format('svg'); /* Legacy iOS */
+  }
+  /* barlow-500 - latin */
+  @font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../font/barlow/barlow-v4-latin-500.eot'); /* IE9 Compat Modes */
+    src: url('../font/barlow/barlow-v4-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../font/barlow/barlow-v4-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../font/barlow/barlow-v4-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../font/barlow/barlow-v4-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../font/barlow/barlow-v4-latin-500.svg#Barlow') format('svg'); /* Legacy iOS */
+  }
+  /* barlow-700 - latin */
+  @font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../font/barlow/barlow-v4-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('../font/barlow/barlow-v4-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../font/barlow/barlow-v4-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../font/barlow/barlow-v4-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../font/barlow/barlow-v4-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../font/barlow/barlow-v4-latin-700.svg#Barlow') format('svg'); /* Legacy iOS */
+}
+
+/****************
+Typography
+****************/
+html {
+    font-size: 18px;
+}
+body {
+    font-family: 'Barlow';
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 18px;
+}
+
+h1 {
+    font-size: 45px;
+    line-height: 52px;
+}
+h2 {
+    font-size: 36px;
+    line-height: 43px;
+}
+h3 {
+    font-size: 21px;
+    line-height: 25px;
+}
+h4 {
+    font-size: 20px;
+    line-height: 24px;
+}
+h5 {
+    font-size: 18px;
+    line-height: 21px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;   
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+    padding-top: 0;
+    margin-top: 0;
+}
+p {
+    line-height: 23px;
+    margin-bottom: 21px;
+}
+a {
+    text-decoration: none;
+}
+
+/****************
+General
+****************/
+:root {
+    /* color */
+    --primary-color: #A0A3A8;
+    --secondary-color: #F4583B;
+    --terteary-color: #4A4A4A;
+    --quaternary-color: #4B4C50;
+    --quinary-color: #252422;
+    --senary-color: #787677;
+    --septenary-color: #747474;
+    --octonary-color: #F1F1F1;
+
+    --color-white: #FFF;
+    --color-black: #000;
+    
+    /* background */
+    --primary-background: #F4375C;
+    --secondary-background: #F5FAFD;
+}
+*,
+*:after,
+*::after,
+*:before,
+*::before {
+    box-sizing: border-box;
+}
+img {
+    /* imagenes fluidas */
+    max-width: 100%;
+    height: auto;
+}
+figure  {
+    margin: 0;
+}
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 35px 0;
+}
+li {
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+.main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn {
+    text-transform: uppercase;
+    color: var(--color-white);
+    padding: 10px 29px;
+    font-size: 15px;
+
+    border: 2px solid var(--color-white);
+    border-radius: 23px; /* bordes redondeados*/
+}
+.padding-big {
+    padding-top: 97px;
+}
+/* header */
+.main-header {
+    background-color: var(--primary-background);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 115px;
+}
+.menu ul {
+    display: flex;
+    margin: 0;
+}
+.menu li {
+    margin-bottom: 0;
+}
+.menu li:not(:last-child) {
+    margin-right: 45px;
+}
+.menu a {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 21px;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+/* hero-banner */
+.main-hero-banner {
+    background-color: var(--primary-background);
+    padding-top: 115px;
+}
+.hero-banner {
+    height: 546px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.description,
+.image-banner  {
+    width: 590px;
+}
+.description {
+    display: flex;
+    align-items: center;
+}
+.description > div {
+    max-width: 531px;
+    width: 100%;
+    color: var(--color-white);
+}
+.description h1 {
+    margin-top: 0;
+    margin-bottom: 21px;
+}
+.description ul {
+    margin-bottom: 40px;
+}
+.description .btn {
+    display: inline-block;
+}
+.image-banner {
+    text-align: right;
+}
+.image-banner img {
+    padding-top: 37px;
+    padding-right: 69px;
+}
+
+/* features */
+.features {
+    padding-left: 22px;
+    padding-right: 21px;
+    padding-bottom: 66px;
+    border-bottom: 1px solid var(--octonary-color);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.features-item {
+    width: 337px;
+    padding-left: 77px;
+    margin-right: 63px;
+    margin-bottom: 39px;
+    position: relative;
+}
+.features :nth-child(3n) {
+    margin-right: 0;
+}
+.features-item::before {
+    font-family: 'Linearicons';
+    font-size: 52px;
+    line-height: 1;
+    color: var(--secondary-color);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.features-item:nth-child(1)::before {
+    content: "\e756";
+}
+.features-item:nth-child(2)::before {
+    content: "\e626";
+}
+.features-item:nth-child(3)::before {
+    content: "\e672";
+}
+.features-item:nth-child(4)::before {
+    content: "\e7ae";
+}
+.features-item:nth-child(5)::before {
+    content: "\e6d9";
+}
+.features-item:nth-child(6)::before {
+    content: "\e7ed";
+}
+
+/* intro */
+.intro {
+    min-height: 540px;;
+    display: flex;
+}
+.intro figure {
+    width: 448px;
+    align-self: flex-end;
+}
+.intro .intro-description {
+    width: 732px;
+    display: flex;
+    align-items: center;
+}
+.intro-description div {
+    max-width: 605px;
+    padding-left: 58px;
+}
