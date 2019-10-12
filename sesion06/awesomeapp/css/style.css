@@ -168,6 +168,20 @@ li {
 .padding-big {
     padding-top: 97px;
 }
+.header-section {
+    text-align: center;
+}
+.header-section h2 {
+    margin-bottom: 0;
+}
+.header-section p {
+    max-width: 824px;
+    margin-top: 19px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--primary-color);
+} 
 /* header */
 .main-header {
     background-color: var(--primary-background);
@@ -303,4 +317,40 @@ li {
 .intro-description div {
     max-width: 605px;
     padding-left: 58px;
+}
+
+/* screenshots */
+.main-screenshots {
+    background-color: var(--secondary-background);
+}
+.screenshots figure {
+    text-align: center;
+    margin-top: 44px;
+}
+/* footer */
+.main-footer {
+    background-color: var(--quinary-color);
+    padding-top: 53px;
+    padding-bottom: 53px;
+}
+.awesome-social ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.awesome-social li {
+    padding-left: 0;
+}
+.awesome-social li:not(:last-child) {
+    margin-right: 30px;
+}
+.awesome-social a {
+    color: var(--color-white);
+    font-size: 25px;
+}
+.footer p {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0;
 }
