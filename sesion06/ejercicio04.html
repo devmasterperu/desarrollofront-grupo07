@@ -6,6 +6,7 @@
     <style>
         span {
             padding-left: 15px;
+            padding-right: 15px;
 
             position: relative;
         }
@@ -22,14 +23,48 @@
             position: absolute;
             left:0;
             top: 50%;
-            transform: translateY(-50%) /* truco centrado */
+            transform: translateY(-50%); /* truco centrado */
         }
 
         span::after {
             content: "";
+            display: inline-block;
+
+            width: 2px;
+            height: 15px;
+
+            background-color: grey;
+
+            position: absolute;
+            right:0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        a {
+            text-decoration: none;
+        }
+        a:link {
+            /* :link - Elemento que aun no fueron visitados */
+            color: skyblue;
+        }
+        a:visited {
+            /* :visited - Enlaces ya visitados */
+            color: orange;
+        }
+        a:hover {
+            /* :hover - El mouse entra al elemento */
+            color: red;
+        }
+        a:active {
+            /* :active - Mantienes apretado el boton del mouse */
+            color: green;
         }
     </style>
 </head>
 <body>
+    <!-- Pseudo elementos -->
     <span>Sergio Vasquez</span>
+    <!-- Psedo clases para enlaces -->
+    <a href="http://devmaster.pe" target="_blank">Devmaster</a>
+    <a href="https://promo.spotify.com" target="_blank">Spotify</a>
 </body>

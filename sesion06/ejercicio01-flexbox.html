@@ -22,10 +22,10 @@
             /* flex-direction: row; */ /* row 👶🏼 | row-reverse* | colomn | column-reverse */
             justify-content: normal; /* normal 👶🏼 | center | space-between | space-around | flex-start | flex-end*/
             /* flex-wrap: wrap-reverse;*/ /* no-wrap 👶🏼 | wrap | wrap-reverse */
+            flex-flow: row wrap; /* flex-direction flex-wrap */
 
-            flex-flow: row no-wrap; /* flex-direction flex-wrap */
-
-            align-items: baseline ; /* normal 👶🏼 | center | flex-start  | flex-end | strech | baseline */
+            /* align-items: baseline ;*/ /* normal 👶🏼 | center | flex-start  | flex-end | strech | baseline */
+            align-content: normal;  /* normal 👶🏼 | center | flex-start | flex-end | space-between | stretch */
         }
 
         section :nth-child(2) {
@@ -34,10 +34,10 @@
         }
 
         section :nth-child(1) {
-            order: 1; 
+            order: 1;
+            align-self: stretch; /* auto 👶🏼 | center |  flex-end | flex-start | strech */
+            height: auto;
         }
-
-        
     </style>
 </head>
 <body>
