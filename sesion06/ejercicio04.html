@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <style>
+        span {
+            padding-left: 15px;
+
+            position: relative;
+        }
+        span::before {
+            content: "";
+            display: inline-block;
+
+            width: 10px;
+            height: 10px;
+
+            background-color: green;
+            border-radius: 50%;
+
+            position: absolute;
+            left:0;
+            top: 50%;
+            transform: translateY(-50%) /* truco centrado */
+        }
+
+        span::after {
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <span>Sergio Vasquez</span>
+</body>
