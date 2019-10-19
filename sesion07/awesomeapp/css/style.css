@@ -342,11 +342,12 @@ li {
 .download-app {
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 88px;
+    padding-bottom: 68px;
 }
 .download {
     margin-top: 45px;
     display: flex;
+    flex-wrap: wrap;
 }
 .download div {
     margin-left: 20px;
@@ -355,14 +356,16 @@ li {
     background-color: var(--color-white);
     border-radius: 12px;
     padding: 21px;
+    margin-bottom: 20px;
 
-    width: 340px;
+    max-width: 340px;
+    width: 31.4814814815%; /* 340px */
 
     display: flex;
     align-items: center;
 }
 .download-app a:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 2.7777777778%; /* 30px */
 }
 .download-app h3 {
     margin-bottom: 2px;
@@ -400,4 +403,32 @@ li {
     color: var(--primary-color);
     margin-top: 0;
     margin-bottom: 0;
+}
+
+/****************
+Media Querie
+****************/
+@media only screen and (max-width: 768px) {
+    /* Features */
+    .features-item {
+        width: 45.8055925433%; /* 344px */
+    }
+    .features :nth-child(3n) {
+        margin-right: 5.5408970976%;
+    }
+    .features :nth-child(2n) {
+        margin-right: 0;
+    }
+    /* Download-app */
+
+}
+
+@media only screen and (max-width: 580px) {
+    .features-item {
+        margin-right: 0;
+        width: 100%; /* 344px */
+    }
+    .features :nth-child(3n) {
+        margin-right: 0;
+    }
 }
