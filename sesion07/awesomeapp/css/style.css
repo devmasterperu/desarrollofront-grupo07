@@ -184,7 +184,7 @@ li {
     margin-left: auto;
     margin-right: auto;
     color: var(--primary-color);
-} 
+}
 /* header */
 .main-header {
     background-color: var(--primary-background);
@@ -265,9 +265,10 @@ li {
     flex-wrap: wrap;
 }
 .features-item {
-    width: 337px;
+    max-width: 337px;
+    width: 29.6394019349%; /* 337px */
     padding-left: 77px;
-    margin-right: 63px;
+    margin-right: 5.5408970976%; /* 63px */
     margin-bottom: 39px;
     position: relative;
 }
@@ -326,6 +327,9 @@ li {
 .main-screenshots {
     background-color: var(--secondary-background);
 }
+.screenshots {
+    padding-bottom: 132px;
+}
 .screenshots figure {
     text-align: center;
     margin-top: 44px;
@@ -338,10 +342,14 @@ li {
 .download-app {
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 88px;
 }
 .download {
     margin-top: 45px;
     display: flex;
+}
+.download div {
+    margin-left: 20px;
 }
 .download-app a {
     background-color: var(--color-white);
@@ -361,6 +369,7 @@ li {
     color: var(--color-black);
 }
 .download-app p {
+    font-size: 16px;
     margin: 0;
     color: var(--primary-color);
 }
