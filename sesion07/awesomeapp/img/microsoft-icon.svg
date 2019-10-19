@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="48px" viewBox="0 0 49 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>microsoft-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Welcome-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="example_2" transform="translate(-1185.000000, -4180.000000)" fill="#888888">
+            <g id="Download" transform="translate(0.000000, 3972.000000)">
+                <g id="Microsoft-Store-" transform="translate(1154.000000, 182.000000)">
+                    <path d="M80,26 L53,29.7905625 L53,49 L80,48.7940165 L80,26 Z M31,32.66672 L31,32.6668867 L31.0181209,49 L51,48.8886245 L50.9914075,30 L31,32.66672 Z M31.0011495,67.3134477 L51,70 L50.9846734,51.1265385 L50.9844605,51.1265385 L31,51 L31.0011495,67.3134477 Z M53.037678,70.2914149 L79.9935545,74 L80,51.0430539 L53,51 L53.037678,70.2914149 Z" id="microsoft-icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
