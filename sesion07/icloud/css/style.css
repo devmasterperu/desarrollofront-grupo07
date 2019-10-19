@@ -1,0 +1,228 @@
+/*
+*   Awesome App
++   Author: Devmaster
+*   Description: Description Proyect
+*   Version: 1.0
+*
+*/
+
+/****************
+Font
+****************/
+
+/****************
+Typography
+****************/
+html {
+    font-size: 22px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+    line-height: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 50px;
+}
+h2 {
+    font-size: 40px;
+    line-height: 42px;
+}
+h3 {
+    font-size: 22px;
+    line-height: 20px;
+}
+h1,
+h2 {
+    font-weight: 700;   
+}
+h3 {
+    font-weight: 500;   
+}
+h1:first-child,
+h2:first-child,
+h3:first-child {
+    padding-top: 0;
+    margin-top: 0;
+}
+p {
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+
+/****************
+General
+****************/
+:root {
+    /* color */
+    --primary-color:;
+    --secondary-color:;
+    --terteary-color:;
+    --quaternary-color:;
+    --quinary-color:;
+    --senary-color:;
+    --septenary-color:;
+    --octonary-color:;
+
+    --color-white: #FFF;
+    --color-black: #000;
+    
+    /* background */
+    --primary-background: #A0A3A8;
+    --secondary-background: #F2F2F2;
+}
+*,
+*:after,
+*::after,
+*:before,
+*::before {
+    box-sizing: border-box;
+}
+
+img {
+    /* imagenes fluidas */
+    max-width: 100%;
+    height: auto;
+}
+figure  {
+    margin: 0;
+}
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    line-height: 20px;
+    margin-bottom: 0;
+}
+.main-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.more {
+    position: relative;
+}
+.more::before {
+    font-family: 'Linearicons';
+    content: '\e93c';
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* header */
+.main-header {
+    background-color: var(--primary-background);
+}
+.header {
+    height: 53px;
+    border-bottom: 2px solid #000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h3 {
+    margin-bottom: 0;
+}
+.header ul {
+    display: flex;
+    align-items: center;
+}
+.header li:not(:last-child) {
+    margin-right: 17px;
+}
+.header a {
+    color: var(--color-black);
+}
+
+/* hero-banner */
+.main-hero-banner {
+    background-color: var(--primary-background);
+}
+.hero-banner {
+    height: 380px;
+
+    display: flex;
+    align-items: center;
+}
+.hero-banner div {
+    width: 580px
+}
+.hero-banner figure {
+    width: 590px;
+    padding-left: 100px;
+}
+
+/* icloud */
+.icloud {
+    height: 338px;
+
+    display: flex;
+    align-items: center;   
+}
+.icloud div,
+.icloud figure {
+    width: 580px
+}
+.icloud div {
+    padding-left: 100px;
+}
+.icloud h2 {
+    margin-bottom: 10px;
+}
+.icloud p {
+    max-width: 480px;
+}
+.icloud a {
+    padding-right: 30px;
+}
+/* search */
+.search {
+    height: 455px;
+
+    display: flex;
+    align-items: center;
+}
+.search div,
+.search figure {
+    width: 580px
+}
+.search h2 {
+    margin-bottom: 10px;
+}
+.search p {
+    max-width: 480px;
+}
+.search figure {
+    padding-left: 100px;
+
+    align-self: flex-end;
+}
+.search img {
+    display: block;
+}
+.search a {
+    padding-right: 30px;
+}
+/* footer */
+.main-footer {
+    background-color: var(--primary-background);
+}
+.footer {
+    height: 122px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
