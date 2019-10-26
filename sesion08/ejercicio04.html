@@ -19,31 +19,39 @@
             background-color: springgreen;
 
             background-image: url("img/sprite-social.png");
+
+            transition: .5s all;
         }
         .social-link:not(:last-child) {
             margin-right: 10px;
         }
-        .social-link:nth-child(1) {
+        .social-item:nth-child(1) .social-link{
             background-position: 503px 162px;
         }
-        .social-link:nth-child(2) {
+        .social-item:nth-child(2) .social-link{
             background-position: 443px 162px;
         }
-        .social-link:nth-child(3) { 
+        .social-item:nth-child(3) .social-link{ 
             background-position: 382px 162px;
         }
-        .social-link:nth-child(4) { 
+        .social-item:nth-child(4) .social-link{ 
             background-position: 321px 162px;
         }
-        .social-link:nth-child(5) { 
+        .social-item:nth-child(5) .social-link{ 
             background-position: 259px 162px;
         }
-        .social-link:nth-child(6) { 
+        .social-item:nth-child(6) .social-link{ 
             background-position: 200px 162px;
         }
-        .social-link:nth-child(7) { 
+        .social-item:nth-child(7) .social-link{ 
             background-position: 139px 162px;
         }
+
+        /* hover */
+        .social-item .social-link:hover {
+            background-position-y: 94px;
+        }
+        
     </style>
 </head>
 <body>
