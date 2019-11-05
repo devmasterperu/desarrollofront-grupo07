@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+</head>
+<body>
+    
+    <script>
+        // Fechas
+        var fecha = new Date();
+
+        console.log(fecha.getFullYear());   // Año
+        console.log(fecha.getMonth());      // Mes (0 al 11)
+        console.log(fecha.getDate());       // fecha
+        console.log(fecha.getDay());        // día
+        console.log(fecha.getHours());      // hora
+        console.log(fecha.getMinutes());    // minutos
+        console.log(fecha.getSeconds());    // segundo
+        console.log(fecha.getMilliseconds()); // milisegundos
+
+        // Operadores Aritmeticos
+        var a = 20;
+        var b = 2;
+
+        console.log(a + b); // Tambien para cadenas
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a % b);
+        console.log(++a);
+        console.log(--a);
+
+        // Operadores de Asignación
+        var numero = 10;
+        numero = numero + 5;
+        console.log(numero) // 15
+
+        var numero2 = 10;
+        numero2 += 5; // 15
+        numero2 -= 5; // 10
+        numero2 *= 2; // 20
+        numero2 /= 4; // 4
+        console.log(numero2);
+
+        // Operadores de Comparación
+        // Si la comparación se cumple me dara true, de lo contrario false
+        var num1 = 40;
+        var num2 = 20;
+        console.log(num1 > num2);
+        console.log(num1 < num2);
+        console.log(num1 >= num2);
+        console.log(num1 <= num2);
+        console.log(num1 == num2); // valor
+        console.log(num1 === num2); // valor y tipo de dato
+        console.log(num1 != num2); // diferentes en valor
+        console.log(num1 !== num2); // diferentes en valor o tipo de dato
+
+        // Operadores Logicos
+        // && (AND)
+        // || (OR)
+        // !  (NOT)
+        var usuario = prompt('Ingrese un usuario');
+        var contrasenia = prompt('Ingrese un contraseñas');
+
+        // if( usuario == 'admin' && contrasenia == '123' ){
+        if( usuario == 'admin' || contrasenia == '123' ){
+            console.log('Bienvenido Admin');
+        } else {
+           console.log('Bienvenido Trabajador');
+        }
+
+        var usuario2 = true;
+        if(!usuario2){
+            console.log('Es verdadero');
+        }else {
+            console.log('Es falso');
+        }
+
+        // Operadores Logicos
+        console.log(typeof usuario2);
+        console.log(typeof usuario);
+    </script>
+</body>

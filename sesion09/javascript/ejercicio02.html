@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+</head>
+<body>
+    <script>
+
+        // cadena
+        var mensaje1 = `Hola, soy una variable`;
+        var mensaje2 = "Hola, soy otra variable";
+
+        /*
+            Comentario para
+            multiples lineas
+        */
+        console.log(mensaje1); // comentario de una linea
+        console.log(mensaje2);
+
+        // numero
+        var diasTrabajados = 5;
+        var igv = 0.18;
+        console.log(igv);
+
+        // booleanos
+        var valorVerdadero = true;
+        var valorFalso = false;
+
+        // undefined
+        var alumno
+        console.log(alumno);
+
+        // null
+        var variableNull = null;
+        console.log(variableNull);
+
+        // funciones
+        function prueba(){
+            console.log('Se ejecuto la función');
+            // alert('Se ejecuto la función');
+        }
+        prueba();
+
+        function suma(a,b,c,d,e) {
+            // sumando las edades los alumnos: Amanda, Sergio, Stuard, Omar, Luis y Dino
+            return a + b + c + d + e + f
+        }
+        console.log(suma(28,21,22,20,23,22));
+
+        // camelcase
+        var funcionResta = function(a,b){
+            return a - b
+        }
+        console.log(funcionResta(100, 20));
+
+        // Arrow Function = Funciones de Flecha
+        var saludar = () => {
+            console.log('Hola, como estas? 🤔');
+        }
+        saludar();
+
+        var saludar = (nombre1, nombre2) => {
+            console.log('Hola, como estas? 🤔 ' + nombre1);
+            console.log('Hola, como estas? 🤔 ' + nombre2);
+
+            // Template string
+            console.log(`Hola, como estas? 🤔 ${nombre1}`);
+            console.log(`Hola, como estas? 🤔 ${nombre2}`);
+        }
+        saludar('Sergio','Luis');
+
+        // Array
+        var alumnos = ['Amanda','Sergio','Stuard','Omar','Luis','Dino']
+        console.log(alumnos[0]); // posicion de Amanda
+        console.log(alumnos[5]); // posición de Dino
+
+        alumnos[6] = "Jesús";
+        alumnos[2] = "Stuard Missel"
+
+        console.log(alumnos.length); // cantidad de elementos en un arreglo
+
+        alumnos.push("Gianfranco");
+        alumnos.push("Hervey");
+        alumnos.unshift("David");
+
+        alumnos.pop();
+        alumnos.shift();
+
+        console.log(alumnos);
+        console.log(alumnos.indexOf("Gianfranco"));
+        console.log(alumnos.indexOf("Amandaa")); // -1
+
+        // Objeto { propiedad: valor }
+        var mascota = {
+            nombre: 'Tasabu',
+            raza: 'pitbull',
+            edad: 7,
+            color: 'blanca, con manchas negras',
+            propietarioMascota: 'Jesús Gonzales',
+            saludar: function() {
+                return "Hola 🐕, mi nombre es" + this.nombre;
+            }
+        }
+
+        console.log(mascota.nombre); // primera forma
+        console.log(mascota['edad']); // segunda forma
+
+        mascota.genero = 'hembra';
+        mascota.nombre = 'Tasabu Pit';
+
+        delete mascota.genero;
+
+        var docentes = [
+            {
+                nombres: 'Hervey Quiñones',
+                curso: 'SQL Server 2016'
+            },
+            {
+                nombres: 'Jesús Gonzales',
+                curso: 'Desarrollo Frontend'
+            }
+        ]
+        console.log(docentes[1].nombres);
+    </script>
+</body>

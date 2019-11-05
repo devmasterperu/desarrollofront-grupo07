@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - Transform</title>
+    <style>
+        div {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .skew {
+            width: 200px;
+            height: 200px;
+            background-color: deeppink;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            /* transform: skewX(-5deg); */
+            /* transform: skewY(-5deg); */
+            transform: skew(-5deg, -5deg);
+        }
+        .scale {
+            width: 200px;
+            height: 200px;
+            background-color: springgreen;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            transform: scale(.5);
+        }
+        .rotate {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            /* Con un valor en positivo gira en sentido de las agujas del reloj */
+            transform: rotate(10deg);
+        }
+        .translate {
+            width: 200px;
+            height: 200px;
+            background-color: midnightblue;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            /* transform: translateX(50px); */
+            /* transform: translateY(50px); */
+            transform: translate(50px, 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="skew"></div>
+    <div class="scale"></div>
+    <div class="rotate"></div>
+    <div class="translate"></div>
+</body>

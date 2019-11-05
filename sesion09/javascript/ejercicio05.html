@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        *   ✅ Ejercicio 01
+        */
+        function promedio(a,b,c){
+            var promedio = (a+b+c)/3;
+            if(promedio >= 14) {
+                console.log('Aluno aprobado');
+            } else {
+                console.log('Alumno Desaprobado');
+            }
+        }   
+        promedio(15,16,17);
+
+        /*
+        *   ✅ Ejercicio 02
+        */
+        // Funciones de Fechas
+        var contrasenia = (a) => {
+            var tamanioContrasenia= a.length;
+            if (tamanioContrasenia >= 6) {
+                console.log('Contraseña Válida');
+            } else {
+                console.log('Contraseña inválida, mínimo 6 caracteres');
+            }
+        }
+        contrasenia('123452');
+
+        /*
+        *   ✅ Ejercicio 03
+        */
+        var valor1 = Number(prompt('Ingrese el 1era valor'));
+        var valor2 = Number(prompt('Ingrese el 2do valor'));
+        /* 1era forma */
+        if( valor1 > valor2) {
+            console.log("El número " + valor1 + " es el mayor");
+        } else {
+            console.log("El número " + valor2 + " es el menor");
+        }
+        /* 2da forma */
+        var mayorValor = Math.max(valor1, valor2);
+        console.log("El número " + mayorValor + " es el mayor");
+    </script>
+</body>

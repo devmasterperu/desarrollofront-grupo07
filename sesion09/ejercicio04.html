@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <style>
+        .caja {
+            width: 200px;
+            height: 200px;
+
+            background-image: linear-gradient(#FF2B45, #10213F);
+
+            animation-name: animateCaja;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-delay: 3s;
+            animation-play-state: paused;
+        }
+
+        /* @keyframes animateCaja {
+            from {
+            }
+            to {
+            }
+        } */
+
+        @keyframes animateCaja {
+            0% {
+                height: 200px;
+            }
+            100% {
+                height: 400px;
+            }
+        }
+
+        .main-ball {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content-ball {
+            width: 150px;
+            height: 150px;
+            background-image: radial-gradient(#FF2B45, #10213F);
+            border-radius: 50%;
+
+            animation-name: animatePelota;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .shadow-ball {
+            display: inline-block;
+            width: 130px;
+            height: 3px;
+            background-color: rgba(0 ,0 ,0, 0.2);
+            border-radius: 50%;
+
+            animation-name: animateSombra;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes animatePelota {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100px);
+            }
+        }
+
+        @keyframes animateSombra {
+            from {
+                width: 30px;
+                height: 3px;
+            }
+            to {
+                width: 130px;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="caja"></div>
+    
+    <!-- Pelota -->
+    <div class="main-ball">
+        <div class="content-ball">
+
+        </div>
+        <div class="shadow-ball">
+        </div>
+    </div>
+</body>

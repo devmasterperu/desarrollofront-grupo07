@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4e8c731652.js" crossorigin="anonymous"></script>
+    <style>
+        ul {
+            display: flex;
+        }
+        li {
+            list-style-type: none;
+        }
+        li:not(:last-child) {
+            margin-right: 7px;
+        }
+        a {
+            background-color: #FF2B45;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 22px;
+            color: #000;
+
+            line-height: 40px;
+            text-align: center;
+
+            /* 🎉 transition: [propiedad/all][duración][timing-function][delay] */
+            transition: background-color 1.5s ease .3s,
+                        color .5s ease .5s,
+                        transform 1s ease 0s;
+            /* transition: all .5s ease; */
+        }
+        a:hover {
+            background-color: #10213F;
+            color: #FFF;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        </ul>
+    </nav>
+</body>
