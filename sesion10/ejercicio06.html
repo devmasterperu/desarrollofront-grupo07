@@ -1,13 +1,15 @@
 <!-- https://getbootstrap.com/docs/4.3/getting-started/introduction/#starter-template -->
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Hello, world!</title>
     <style>
@@ -15,8 +17,9 @@
             display: none;
         }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <section>
         <div class="container">
             <div class="row">
@@ -32,24 +35,25 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Calificación</th>
+                                <th scope="col">Acción</th>
                             </tr>
                         </thead>
                         <tbody id="table">
-                            
+
                         </tbody>
                     </table>
                     <button id="btnAgregar" class="btn btn-primary">Agregar</button>
                     <!-- formulario -->
                     <form method="POST" autocomplete="off">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Nombre</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+                            <label for="evaluationName">Nombre</label>
+                            <input type="text" class="form-control" id="evaluationName" placeholder="Nombre">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">%</label>
-                            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="%">
+                            <label for="percentageValue">%</label>
+                            <input type="number" class="form-control" id="percentageValue" placeholder="%">
                         </div>
-                        <button type="submit" class="btn btn-success">Registrar</button>
+                        <button id="btnRegistrar" type="submit" class="btn btn-success">Registrar</button>
                     </form>
                 </div>
             </div>
@@ -58,14 +62,16 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             /*
             *   Listar
             */
@@ -75,35 +81,128 @@
                 dataType: "json",
                 contentType: "application/json"
             })
-            .done(function(data){
-                // console.log(data);
-                var index
-                for (index = 0; index < data.length; index++) {
-                    console.log(data[index].id);
-                    console.log(data[index].evaluationName);
-                    console.log(data[index].percentageValue);
+                .done(function (data) {
+                    // console.log(data);
+                    var index
+                    for (index = 0; index < data.length; index++) {
+                        console.log(data[index].id);
+                        console.log(data[index].evaluationName);
+                        console.log(data[index].percentageValue);
 
-                    var estructuraHtml = "";
-                    estructuraHtml += "<tr>";
-                    estructuraHtml +="<td>" + data[index].id + "</td>";
-                    estructuraHtml +="<td>" + data[index].evaluationName + "</td>";
-                    estructuraHtml +="<td>" + data[index].percentageValue + "</td>";
-                    estructuraHtml += "</tr>";
+                        var estructuraHtml = "";
+                        estructuraHtml += "<tr>";
+                        estructuraHtml += "<td>" + data[index].id + "</td>";
+                        estructuraHtml += "<td>" + data[index].evaluationName + "</td>";
+                        estructuraHtml += "<td>" + data[index].percentageValue + "</td>";
+                        estructuraHtml += "<td><button type='button' id='btnEliminar' data-id='" + data[index].id + "'>❌ Eliminar </button></td>";
+                        estructuraHtml += "</tr>";
+                        // ⚠️ data-attribute ➡️ El atributo se utiliza para almacenar datos personalizados privados de la página o aplicación
+                        $('#table').append(estructuraHtml);
+                    }
+                })
+                .fail(function () {
+                    console.log("error");
+                })
+                .always(function () {
+                    console.log("Se ejecuta siempre");
+                })
 
-                    $('#table').append(estructuraHtml);
-                }
-            })
-            .fail( function(){
-                console.log("error");
-            })
-            .always( function(){
-            console.log("Se ejecuta siempre");
-            })
-        
-            $("#btnAgregar").on("click",function(){
+            $("#btnAgregar").on("click", function () {
                 $('form').slideToggle();
+            });
+
+            /*
+            *   Registrar
+            */
+            $("#btnRegistrar").on("click", function (e) {
+                // Deteniedo la accion por defecto del button
+                e.preventDefault();
+
+                var evaluacion = $("#evaluationName").val();
+                var porcentaje = $("#percentageValue").val();
+
+                // var datos = new Object
+                var datos = {};
+                datos.evaluationName = evaluacion;
+                datos.percentageValue = porcentaje;
+                console.log(datos);
+                console.log(JSON.stringify(datos));
+
+                $.ajax({
+                    url: "https://devmasterdeswebapi.azurewebsites.net/api/UpcomingCourses/23/QualificationSettings",
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify(datos)
+                })
+                    .done(function () {
+                        alert('Registro exitoso');
+                    })
+                    .fail(function () {
+                        console.log("error");
+                    })
+                    .always(function () {
+                        console.log("Se ejecuta siempre");
+                    })
+            });
+
+            /*
+            *   Eliminar
+            */
+            $(document).on("click", "#btnEliminar", function () {
+                var id = $(this).data("id");
+                if (confirm("Deseas eliminar esta calificación?")) {
+                    $.ajax({
+                        url: "https://devmasterdeswebapi.azurewebsites.net/api/QualificationSettings/" + id,
+                        type: "DELETE",
+                        dataType: "json",
+                        contentType: "application/json"
+                    })
+                        .done(function (data) {
+                            $("#table").html("");
+
+                            $.ajax({
+                                url: "https://devmasterdeswebapi.azurewebsites.net/api/UpcomingCourses/23/QualificationSettings",
+                                type: "GET",
+                                dataType: "json",
+                                contentType: "application/json"
+                            })
+                                .done(function (data) {
+                                    // console.log(data);
+                                    var index
+                                    for (index = 0; index < data.length; index++) {
+                                        console.log(data[index].id);
+                                        console.log(data[index].evaluationName);
+                                        console.log(data[index].percentageValue);
+
+                                        var estructuraHtml = "";
+                                        estructuraHtml += "<tr>";
+                                        estructuraHtml += "<td>" + data[index].id + "</td>";
+                                        estructuraHtml += "<td>" + data[index].evaluationName + "</td>";
+                                        estructuraHtml += "<td>" + data[index].percentageValue + "</td>";
+                                        estructuraHtml += "<td><button type='button' id='btnEliminar' data-id='" + data[index].id + "'>❌ Eliminar </button></td>";
+                                        estructuraHtml += "</tr>";
+
+                                        $('#table').append(estructuraHtml);
+                                    }
+                                })
+                                .fail(function () {
+                                    console.log("error");
+                                })
+                                .always(function () {
+                                    console.log("Se ejecuta siempre");
+                                })
+                        })
+                        .fail(function () {
+                            console.log("error");
+                        })
+                        .always(function () {
+                            console.log("Se ejecuta siempre");
+                        })
+                }
             });
         });
     </script>
-  </body>
+</body>
+
 </html>
