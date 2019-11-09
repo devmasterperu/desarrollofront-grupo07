@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+        form {
+            display: none;
+        }
+    </style>
   </head>
   <body>
     <section>
@@ -29,15 +34,11 @@
                                 <th scope="col">Calificación</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
+                        <tbody id="table">
+                            
                         </tbody>
                     </table>
+                    <button id="btnAgregar" class="btn btn-primary">Agregar</button>
                     <!-- formulario -->
                     <form method="POST" autocomplete="off">
                         <div class="form-group">
@@ -48,7 +49,7 @@
                             <label for="exampleInputPassword1">%</label>
                             <input type="number" class="form-control" id="exampleInputPassword1" placeholder="%">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-success">Registrar</button>
                     </form>
                 </div>
             </div>
@@ -65,25 +66,43 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-            alert("Genial, cargo mi jQuery");
             /*
             *   Listar
             */
-        $.ajax({
-            url: "https://devmasterdeswebapi.azurewebsites.net/api/UpcomingCourses/23/QualificationSettings",
-            type: "GET",
-            dataType: "json",
-            contentType: "application/json"
-        })
-        .done(function(data){
-            console.log(data);
-        })
-        .fail( function(){
-            console.log("error");
-        })
-        .always( function(){
-        console.log("Se ejecuta siempre");
-        })
+            $.ajax({
+                url: "https://devmasterdeswebapi.azurewebsites.net/api/UpcomingCourses/23/QualificationSettings",
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json"
+            })
+            .done(function(data){
+                // console.log(data);
+                var index
+                for (index = 0; index < data.length; index++) {
+                    console.log(data[index].id);
+                    console.log(data[index].evaluationName);
+                    console.log(data[index].percentageValue);
+
+                    var estructuraHtml = "";
+                    estructuraHtml += "<tr>";
+                    estructuraHtml +="<td>" + data[index].id + "</td>";
+                    estructuraHtml +="<td>" + data[index].evaluationName + "</td>";
+                    estructuraHtml +="<td>" + data[index].percentageValue + "</td>";
+                    estructuraHtml += "</tr>";
+
+                    $('#table').append(estructuraHtml);
+                }
+            })
+            .fail( function(){
+                console.log("error");
+            })
+            .always( function(){
+            console.log("Se ejecuta siempre");
+            })
+        
+            $("#btnAgregar").on("click",function(){
+                $('form').slideToggle();
+            });
         });
     </script>
   </body>
