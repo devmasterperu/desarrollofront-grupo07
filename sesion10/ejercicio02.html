@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <style>
+        /* #texto */
+        /* .texto2 */
+    </style>
+</head>
+<body>
+    <h1> Seleccionando elementos con jQuery</h1>
+    <p id="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sapiente molestias doloremque harum temporibus sunt! Eos magnam optio doloribus numquam iste quod natus officia deleniti, quam minus commodi eligendi sint?</p>
+    <p class="texto2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, hic veniam rerum deserunt recusandae, repellendus saepe quo veritatis sunt, incidunt alias suscipit nulla nesciunt ab enim magnam ad eum! Cupiditate!</p>
+    <a href="file.pdf" class="archivo">Pdf</a>
+
+    <!-- https://code.jquery.com/ -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            // $("#texto");
+            // $(".texto2");
+            // $('a');
+            // $('a.archivo');
+            // $("[href='file.pdf']");
+            
+            var variable = $("h1").html(); // Get
+            $("h1").html("jQuery"); // Set
+            console.log(variable);
+        });
+    </script>
+</body>
