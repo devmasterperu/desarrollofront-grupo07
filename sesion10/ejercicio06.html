@@ -11,25 +11,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Consumiendo API Devmaster</title>
     <style>
+        .main-calificacion {
+            margin-top: 40px;
+        }
         form {
             display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="http://devmaster.pe/assets/img/logo_18_blanco.svg" width="120" height="auto" class="d-inline-block align-top" alt="Devmaster">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Inicio<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Sobre Nosotros</a>
+            </div>
+        </div>
+    </nav>
+    <section class="main-calificacion">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <br>
-                    <h1>Califición Devmaster</h1>
+                    <h3>Califición Devmaster</h3>
                 </div>
                 <div class="col-12">
-                    <!-- tabla -->
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
@@ -43,7 +59,6 @@
                         </tbody>
                     </table>
                     <button id="btnAgregar" class="btn btn-primary">Agregar</button>
-                    <!-- formulario -->
                     <form method="POST" autocomplete="off">
                         <div class="form-group">
                             <label for="evaluationName">Nombre</label>
@@ -70,139 +85,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-            /*
-            *   Listar
-            */
-            $.ajax({
-                url: "https://devmasterdeswebapi.azurewebsites.net/api/UpcomingCourses/23/QualificationSettings",
-                type: "GET",
-                dataType: "json",
-                contentType: "application/json"
-            })
-                .done(function (data) {
-                    // console.log(data);
-                    var index
-                    for (index = 0; index < data.length; index++) {
-                        console.log(data[index].id);
-                        console.log(data[index].evaluationName);
-                        console.log(data[index].percentageValue);
-
-                        var estructuraHtml = "";
-                        estructuraHtml += "<tr>";
-                        estructuraHtml += "<td>" + data[index].id + "</td>";
-                        estructuraHtml += "<td>" + data[index].evaluationName + "</td>";
-                        estructuraHtml += "<td>" + data[index].percentageValue + "</td>";
-                        estructuraHtml += "<td><button type='button' id='btnEliminar' data-id='" + data[index].id + "'>❌ Eliminar </button></td>";
-                        estructuraHtml += "</tr>";
-                        // ⚠️ data-attribute ➡️ El atributo se utiliza para almacenar datos personalizados privados de la página o aplicación
-                        $('#table').append(estructuraHtml);
-                    }
-                })
-                .fail(function () {
-                    console.log("error");
-                })
-                .always(function () {
-                    console.log("Se ejecuta siempre");
-                })
-
-            $("#btnAgregar").on("click", function () {
-                $('form').slideToggle();
-            });
-
-            /*
-            *   Registrar
-            */
-            $("#btnRegistrar").on("click", function (e) {
-                // Deteniedo la accion por defecto del button
-                e.preventDefault();
-
-                var evaluacion = $("#evaluationName").val();
-                var porcentaje = $("#percentageValue").val();
-
-                // var datos = new Object
-                var datos = {};
-                datos.evaluationName = evaluacion;
-                datos.percentageValue = porcentaje;
-                console.log(datos);
-                console.log(JSON.stringify(datos));
-
-                $.ajax({
-                    url: "https://devmasterdeswebapi.azurewebsites.net/api/UpcomingCourses/23/QualificationSettings",
-                    type: "POST",
-                    dataType: "json",
-                    contentType: "application/json",
-                    data: JSON.stringify(datos)
-                })
-                    .done(function () {
-                        alert('Registro exitoso');
-                    })
-                    .fail(function () {
-                        console.log("error");
-                    })
-                    .always(function () {
-                        console.log("Se ejecuta siempre");
-                    })
-            });
-
-            /*
-            *   Eliminar
-            */
-            $(document).on("click", "#btnEliminar", function () {
-                var id = $(this).data("id");
-                if (confirm("Deseas eliminar esta calificación?")) {
-                    $.ajax({
-                        url: "https://devmasterdeswebapi.azurewebsites.net/api/QualificationSettings/" + id,
-                        type: "DELETE",
-                        dataType: "json",
-                        contentType: "application/json"
-                    })
-                        .done(function (data) {
-                            $("#table").html("");
-
-                            $.ajax({
-                                url: "https://devmasterdeswebapi.azurewebsites.net/api/UpcomingCourses/23/QualificationSettings",
-                                type: "GET",
-                                dataType: "json",
-                                contentType: "application/json"
-                            })
-                                .done(function (data) {
-                                    // console.log(data);
-                                    var index
-                                    for (index = 0; index < data.length; index++) {
-                                        console.log(data[index].id);
-                                        console.log(data[index].evaluationName);
-                                        console.log(data[index].percentageValue);
-
-                                        var estructuraHtml = "";
-                                        estructuraHtml += "<tr>";
-                                        estructuraHtml += "<td>" + data[index].id + "</td>";
-                                        estructuraHtml += "<td>" + data[index].evaluationName + "</td>";
-                                        estructuraHtml += "<td>" + data[index].percentageValue + "</td>";
-                                        estructuraHtml += "<td><button type='button' id='btnEliminar' data-id='" + data[index].id + "'>❌ Eliminar </button></td>";
-                                        estructuraHtml += "</tr>";
-
-                                        $('#table').append(estructuraHtml);
-                                    }
-                                })
-                                .fail(function () {
-                                    console.log("error");
-                                })
-                                .always(function () {
-                                    console.log("Se ejecuta siempre");
-                                })
-                        })
-                        .fail(function () {
-                            console.log("error");
-                        })
-                        .always(function () {
-                            console.log("Se ejecuta siempre");
-                        })
-                }
-            });
-        });
-    </script>
+   <script src="js/app2.js"></script>
 </body>
 
 </html>
