@@ -8,7 +8,7 @@ $(document).ready(function () {
         type: "GET",
         dataType: "json",
         contentType: "application/json"
-    })
+        })
         .done(function (data) {
             // console.log(data);
             var index
@@ -61,18 +61,18 @@ $(document).ready(function () {
             contentType: "application/json",
             data: JSON.stringify(datos)
         })
-            .done(function () {
-                alert('Registro exitoso');
-                // Ustedes ya saben que debe ir aquí 😁
-                $("#table").html("");
-                fnListar();
-            })
-            .fail(function () {
-                console.log("error");
-            })
-            .always(function () {
-                console.log("Se ejecuta siempre");
-            });
+        .done(function () {
+            alert('Registro exitoso');
+            // Ustedes ya saben que debe ir aquí 😁
+            $("#table").html("");
+            fnListar();
+        })
+        .fail(function () {
+            console.log("error");
+        })
+        .always(function () {
+            console.log("Se ejecuta siempre");
+        });
     });
 
     /*
@@ -87,16 +87,16 @@ $(document).ready(function () {
                 dataType: "json",
                 contentType: "application/json"
             })
-                .done(function (data) {
-                    $("#table").html("");
-                    fnListar();
-                })
-                .fail(function () {
-                    console.log("error");
-                })
-                .always(function () {
-                    console.log("Se ejecuta siempre");
-                });
+            .done(function (data) {
+                $("#table").html("");
+                fnListar();
+            })
+            .fail(function () {
+                console.log("error");
+            })
+            .always(function () {
+                console.log("Se ejecuta siempre");
+            });
         }
     });
 });
