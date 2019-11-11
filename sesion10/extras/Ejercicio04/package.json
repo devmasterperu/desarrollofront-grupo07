@@ -1,0 +1,19 @@
+{
+  "name": "typedjs",
+  "version": "1.0.0",
+  "description": "Prueba Typed en Devmaster",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Html5",
+    "css3",
+    "js"
+  ],
+  "author": "gmanriqe",
+  "license": "MIT",
+  "devDependencies": {
+    "typed.js": "^2.0.11"
+  }
+}
