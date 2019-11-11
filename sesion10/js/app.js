@@ -15,5 +15,5 @@ $(document).ready(function(){
 
     $(".parrafo").remove();
 
-    // 😭 https://api.jquery.com/category/manipulation/
+    // https://api.jquery.com/category/manipulation/ 😁
 });
