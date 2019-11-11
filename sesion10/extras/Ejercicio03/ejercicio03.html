@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <style>
+        .map-google {
+            width: 100%;
+            height: 600px;
+            outline:1px solid deepskyblue; 
+        }
+    </style>
+</head>
+<body>
+    <div class="map-google" id="map"></div>
+    <!-- https://www.google.com/maps/place/Devmaster/@-11.1212245,-77.5972633,17z/data=!3m1!4b1!4m5!3m4!1s0x9106dfb1caefafc5:0x66b8b39d86ea4503!8m2!3d-11.1212298!4d-77.5950746 -->
+    <script>
+        function mapGoogle() {
+            var coordenada = {
+                lat: -11.1212245,
+                lng: -77.5972633
+            }
+
+            var mapa = new google.maps.Map(
+                document.getElementById("map"),
+                {
+                    zoom: 10,
+                    center: coordenada
+                }
+            )
+
+            new google.maps.Marker({
+                position: coordenada,
+                map: mapa
+            })
+        }
+    </script>
+    <!-- Api google -->
+    <!-- https://cloud.google.com/maps-platform/?hl=es -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbKOBQKcwOdLzN9n5YBMDRZnsUc-OCJSY&callback=mapGoogle"></script>
+</body>
