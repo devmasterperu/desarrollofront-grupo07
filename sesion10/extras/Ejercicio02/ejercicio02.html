@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/flexslider.css">
+</head>
+
+<body>
+    <!-- Place somewhere in the <body> of your page -->
+    <div class="flexslider carousel">
+        <ul class="slides">
+            <li>
+                <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <!-- items mirrored twice, total of 12 -->
+        </ul>
+    </div>
+
+    <!-- CDN ➡️ https://code.jquery.com/ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- flexslider -->
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                animationLoop: false,
+                itemWidth: 210,
+                itemMargin: 5
+            });
+        })
+    </script>
+</body>
