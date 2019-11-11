@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Devmaster - </title>
+    <link rel="stylesheet" href="css/magnific-popup.css">
+</head>
+<body>
+    
+    <h1>Magnific popup</h1>
+    <a class="test-popup-link" href="img/images.jpeg">Abrir Imagen</a>
+    <a class="test-popup-link2" href="https://lh3.ggpht.com/p/AF1QipNrnL4DIsOtZWyytfxSUAA07fUEqiX2lKqdcaXs=s512">Esto es otra imagen</a>
+
+    <button id="openPopup">Galeria</button>
+    <!-- jQuery -->
+    <!-- <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
+<script src="js/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // magnific popup
+            $('.test-popup-link').magnificPopup({
+                type: 'image'
+            // other options
+            });
+
+            $('.test-popup-link2').magnificPopup({
+                type: 'image'
+            // other options
+            });
+
+            $('#openPopup').magnificPopup({
+                items: [
+                    { src: 'https://img.brickowl.com/files/image_cache/larger/lego-iron-man-with-circle-on-chest-without-ion-jet-minifigure-25.jpg', title: 'Imagen 1'},
+                    { src: 'https://images.pexels.com/photos/2805877/pexels-photo-2805877.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260', title: 'Imagen 2'},
+                    { src: 'https://img.brickowl.com/files/image_cache/larger/lego-iron-man-with-circle-on-chest-without-ion-jet-minifigure-25.jpg', title: 'Imagen 3'},
+                ],
+                gallery: {
+                    enabled: true
+                },
+                type: 'image' // this is a default type
+            })
+        });
+    </script>
+</body>
